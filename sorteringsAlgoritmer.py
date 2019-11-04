@@ -1,5 +1,5 @@
-def navnSort():
+def insertionSort():
     pass
 
-def navn2Sort():
+def bubbleSort():
     pass
