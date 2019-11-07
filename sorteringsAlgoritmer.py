@@ -2,8 +2,10 @@
 def insertionSort(list):
     #vi gemmer parameteren, list, som sin egen liste
     sejereListe = list
-    #Vi laver et for loop som kigger på elementerne mellem 1, det andet element i listen, og mængden af elementer i listen "sejereListe"
-    for i in range(1, len(sejereListe)):
+    #Vi laver et for loop som bliver kørt igennem et antal gange lig med størrelsen på listen "sejereListe"
+    for i in range(0, len(sejereListe)):
+
+        #Igennem hvert loop bliver der defineret "key" til at være det nye element som den er nået til i listen.
         key = sejereListe[i]
 
         j = i - 1
