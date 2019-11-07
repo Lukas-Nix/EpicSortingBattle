@@ -6,6 +6,7 @@ def insertionSort(list):
         key=file[i]
 
 def bubbleSort():
+    importFile("testfiles/testcase0.txt")
     pass
 
 
