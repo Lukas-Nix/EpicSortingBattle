@@ -12,6 +12,7 @@ def insertionSort():
     pass
 
 def bubbleSort():
+    importFile("testfiles/testcase0.txt")
     pass
 
 
