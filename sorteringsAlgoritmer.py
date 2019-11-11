@@ -13,10 +13,15 @@ def insertionSort():
 
 def bubbleSort(list):
     bubbleList = list.copy()
+
+    # x er mængden af gange løkken er blevet kørt igennem #
     x = 0
+
+    # 
     for e in range(len(bubbleList) - 1):
         x = x + 1
 
+        #
         for i in range(len(bubbleList) - x):
 
             if bubbleList[i] > bubbleList[i+1]:
