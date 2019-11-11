@@ -8,6 +8,7 @@ def insertionSort(list):
         #Igennem hvert loop bliver der defineret "key" til at være det nye element som den er nået til i listen.
         key = sejereListe[i]
 
+        #
         j = i - 1
         while j >= 0 and key < sejereListe[j]:
             sejereListe[j + 1] = sejereListe[j]
