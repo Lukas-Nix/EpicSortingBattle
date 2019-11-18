@@ -1,6 +1,6 @@
 #I vores insertionSort giver vi den en parameter "list", så at når vi kalder på funktionen, kræver den en parameter
 def insertionSort(list):
-    #vi gemmer parameteren, list, som sin egen liste
+    #vi gemmer parameteren, list, som sin egen liste, så vi ikke påvirker den originalle liste 
     sejereListe = list
     #Vi laver et for loop som bliver kørt igennem et antal gange lig med størrelsen på listen "sejereListe"
     for i in range(1, len(sejereListe)):
