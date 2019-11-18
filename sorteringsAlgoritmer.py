@@ -63,7 +63,7 @@ def SelectionSort(list):
             if selection[mindsteTal]>selection[j]:
                 mindsteTal=j
 
-        # til sidst bytter vi om på de to tal i selection listen
+        # til sidst bytter vi om på det element vi er nået til i vores første for loop, med det mindste tal af elementerne i talene efter
         selection[i], selection[mindsteTal] = selection[mindsteTal], selection[i]
 
     #så smider vi den tilbage til brugeren
