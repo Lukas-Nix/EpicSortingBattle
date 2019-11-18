@@ -22,6 +22,7 @@ def insertionSort(list):
             sejereListe[j + 1] = sejereListe[j]
             j -= 1
         sejereListe[j + 1] = key
+    #Så smider vi den tilbage som sejereListe
     return sejereListe
 
 def bubbleSort(list):
@@ -45,12 +46,39 @@ def bubbleSort(list):
     #listen bliver smidt ud ændret til at være sorteret
     return bubbleList
 
+def SelectionSort(list):
+    #vi gemmer parameteren, list, som sin egen liste, så vi ikke påvirker den originalle liste
+    selection = list
+
+    #Vi laver et for loop som kører igennem for hvert element i den nye liste
+    for i in range(len(selection)):
+        # Hver gang loopet går igennem, så gemmer vi det mindste tal som er det element vi er nået til et loopet
+        mindsteTal = i
+
+        '''
+        Så kører vi igennem listen igen og tjekker om det nye tal er mindre end mindsteTal.
+        Hvis den er, så definerer vi det mindsteTal til at være det mindre tal
+        '''
+        for j in range(i+1,len(selection)):
+            if selection[mindsteTal]>selection[j]:
+                mindsteTal=j
+
+        # til sidst bytter vi om på de to tal i selection listen
+        selection[i], selection[mindsteTal] = selection[mindsteTal], selection[i]
+
+    #så smider vi den tilbage til brugeren
+    return selection
+
+
 if __name__ == "__main__":
 
     L = [4, 3, 2, 1]
+    L2 = [4, 3, 2, 6,1,8,7]
     print(bubbleSort(L))
     joy=[22,5,1,7,2,7,98,3,22,5,1,7,2,7,98,3,22,5,1,7,2,7,98,3,22,5,1,7,2,7,98,3,22,5,1,7,2,7,98,3,22,5,1,7,2,7,98,3]
     insertionSort(joy)
+    SelectionSort(L2)
+    print(L2)
     #print(sejereListe)
     for i in range(len(joy)):
         print("% d" % joy[i])
