@@ -1,7 +1,7 @@
 #I vores insertionSort giver vi den en parameter "list", så at når vi kalder på funktionen, kræver den en parameter
 def insertionSort(list):
-    #vi gemmer parameteren, list, som sin egen liste, så vi ikke påvirker den originalle liste
-    sejereListe = list
+    #vi gemmer parameteren, list, som en kopi, så vi ikke påvirker den originale
+    sejereListe = list.copy()
     #Vi laver et for loop som bliver kørt igennem et antal gange lig med størrelsen på listen "sejereListe"
     for i in range(1, len(sejereListe)):
         #Igennem hvert loop bliver der defineret "key" til at være det nye element som den er nået til i listen.
@@ -46,9 +46,9 @@ def bubbleSort(list):
     #listen bliver smidt ud ændret til at være sorteret
     return bubbleList
 
-def SelectionSort(list):
-    #vi gemmer parameteren, list, som sin egen liste, så vi ikke påvirker den originalle liste
-    selection = list
+def selectionSort(list):
+    #vi gemmer parameteren, list, som en kopi, så vi ikke påvirker den originale
+    selection = list.copy()
 
     #Vi laver et for loop som kører igennem for hvert element i den nye liste
     for i in range(len(selection)):
@@ -71,16 +71,12 @@ def SelectionSort(list):
 
 def mergeSort():
     pass
-    
+
 if __name__ == "__main__":
 
     L = [4, 3, 2, 1]
     L2 = [4, 3, 2, 6,1,8,7]
     print(bubbleSort(L))
     joy=[22,5,1,7,2,7,98,3,22,5,1,7,2,7,98,3,22,5,1,7,2,7,98,3,22,5,1,7,2,7,98,3,22,5,1,7,2,7,98,3,22,5,1,7,2,7,98,3]
-    insertionSort(joy)
-    SelectionSort(L2)
-    print(L2)
-    #print(sejereListe)
-    for i in range(len(joy)):
-        print("% d" % joy[i])
+    print(insertionSort(joy))
+    print(selectionSort(L2))
