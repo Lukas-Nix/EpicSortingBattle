@@ -69,7 +69,9 @@ def SelectionSort(list):
     #så smider vi den tilbage til brugeren
     return selection
 
-
+def mergeSort():
+    pass
+    
 if __name__ == "__main__":
 
     L = [4, 3, 2, 1]
